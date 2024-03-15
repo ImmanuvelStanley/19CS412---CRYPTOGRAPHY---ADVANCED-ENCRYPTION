@@ -21,6 +21,7 @@ STEP-7: Decryption is done as cipherdmod n.
 
 ## PROGRAM:
 ```
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -82,9 +83,10 @@ int decryptedMessage = decrypt(ciphertext, d, n);
 printf("Decrypted message: %d\n", decryptedMessage);
 return 0;
 }
+
 ```
 ## OUTPUT:
-![Screenshot 2024-03-05 113517](https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/b96f8704-db74-4fb0-835d-078d58644625)
+![Screenshot_20240315_014212](https://github.com/ImmanuvelStanley/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/119476328/1146b086-a8f2-4896-a8f0-d4ff2987f1b4)
 
 
 ## RESULT :
@@ -139,24 +141,18 @@ return (((long long int)pow(a, b)) % P);
 int main()
 {
 long long int P, G, x, a, y, b, ka, kb;
-// Both the persons will be agreed upon the
-// public keys G and P
 printf("Enter the value of P:");
 scanf("%lld",&P); // A prime number P is taken
 printf("The value of P : %lld\n", P);
 printf("Enter the value of G:");
 scanf("%lld",&G); // A primitive root for P, G is taken
 printf("The value of G : %lld\n\n", G);
-// Alice will choose the private key a
 a = 4; // a is the chosen private key
 printf("The private key a for Alice : %lld\n", a);
 x = power(G, a, P); // gets the generated key
-// Bob will choose the private key b
 b = 3; // b is the chosen private key
 printf("The private key b for Bob : %lld\n\n", b);
 y = power(G, b, P); // gets the generated key
-// Generating the secret key after the exchange
-// of keys
 ka = power(y, a, P); // Secret key for Alice
 kb = power(x, b, P); // Secret key for Bob
 printf("Secret key for the Alice is : %lld\n", ka);
@@ -166,7 +162,7 @@ return 0;
 ```
 ## OUTPUT:
 
-<img width="342" alt="image" src="https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/a3f5b0fa-ef81-4215-9521-2a16c87cef68">
+![Screenshot_20240315_015329](https://github.com/ImmanuvelStanley/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/119476328/090078d6-8255-476f-95a0-5c392ba6c750)
 
 
 ## RESULT: 
@@ -211,10 +207,11 @@ print("encrypted string: ", encMessage)
 decMessage = fernet.decrypt(encMessage).decode()
  
 print("decrypted string: ", decMessage)
+
 ```
 ## OUTPUT:
 
-<img width="756" alt="image" src="https://github.com/AlluguriSrikrishnateja/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/118343892/23e74c08-7cea-4381-b9fe-97e247b17470">
+![Screenshot_20240315_023320](https://github.com/ImmanuvelStanley/19CS412---CRYPTOGRAPHY---ADVANCED-ENCRYPTION/assets/119476328/78adc23a-2cda-413a-a8bf-657571a4996c)
 
 ## RESULT:
 
